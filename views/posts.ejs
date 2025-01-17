@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Forum - Posts</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Horror Forum Posts</h1>
+
+    <!-- Navigation Links -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Posts List -->
+        <% if (posts && posts.length > 0) { %>
+            <ul>
+                <% posts.forEach(function(post) { %>
+                    <li>
+                        <h2><%= post.title %></h2>
+                        <p><%= post.content %></p>
+                        <!-- Additional post details like author, date, etc. -->
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No posts found.</p>
+        <% } %>
+    </main>
+</body>
+</html>

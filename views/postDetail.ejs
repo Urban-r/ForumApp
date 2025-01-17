@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... head contents ... -->
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <!-- Navigation Links -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/topics">Back to Topics</a></li>
+        </ul>
+    </nav>
+    <h1><%= post.title %></h1>
+    <p>Posted by: <%= post.username %> in <%= post.topic_name %></p>
+    <div>
+        <%= post.content %>
+    </div>
+    <!-- ... rest of the body ... -->
+</body>
+</html>

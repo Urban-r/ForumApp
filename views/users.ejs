@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Forum - Users</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Horror Forum - Users</h1>
+    
+    <!-- Navigation Links -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Users List -->
+        <% if (users && users.length > 0) { %>
+            <ul>
+                <% users.forEach(function(user) { %>
+                    <li><%= user.username %> - <%= user.email %></li> <!-- Display each user's name and email -->
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No users found.</p>
+        <% } %>
+    </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Forum - Search</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Forum Search</h1>
+
+    <!-- Navigation Links -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Search Form -->
+        <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Search for posts..." required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Search Results -->
+        <% if (typeof results !== 'undefined' && results.length > 0) { %>
+            <h2>Search Results:</h2>
+            <ul>
+                <% results.forEach(function(post) { %>
+                    <li>
+                        <h3><%= post.title %></h3>
+                        <p><%= post.content %></p>
+                        <!-- Additional details -->
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else if (typeof results !== 'undefined') { %>
+            <p>No results found for "<%= query %>".</p>
+        <% } %>
+    </main>
+</body>
+</html>

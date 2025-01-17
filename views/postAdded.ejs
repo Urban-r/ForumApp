@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Added Successfully</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Post Added Successfully</h1>
+
+    <!-- Navigation Links -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/topics">Back to Topics</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div>
+            <h2><%= post.title %></h2>
+            <p><%= post.post %></p>
+            <p>Posted by: <%= user.username %></p>
+            <p>In topic: <%= topic.name %></p>
+        </div>
+    </main>
+</body>
+</html>
